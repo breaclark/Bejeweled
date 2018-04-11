@@ -276,10 +276,10 @@ Board.prototype.startBoard = function () {
   newScore = 0;
   currentScore = 0;
 };
-var green = "green.svg";
-var blue = "blue.svg";
-var yellow = "yellow.svg";
-var red = "red.svg";
+var green;
+var blue;
+var yellow;
+var red;
 var set;
 function jewelSet() {
   if (set === "drwho") {
@@ -302,6 +302,11 @@ function jewelSet() {
     blue = "flower.png";
     yellow = "star.png";
     red = "mush.png";
+  } else {
+    green = "green.svg";
+    blue = "blue.svg";
+    yellow = "yellow.svg";
+    red = "red.svg";
   }
 }
 // User Interface Logic
