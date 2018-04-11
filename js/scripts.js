@@ -276,7 +276,19 @@ Board.prototype.startBoard = function () {
   newScore = 0;
   currentScore = 0;
 };
-
+var green = "green.svg";
+var blue = "blue.svg";
+var yellow = "yellow.svg";
+var red = "red.svg";
+var set;
+function jewelSet() {
+  if (set === "drwho") {
+    var green = "angel.png";
+    var blue = "tardis.png";
+    var yellow = "cyber.jpg";
+    var red = "dalek.png";
+  }
+}
 // User Interface Logic
 function scoreTicker() {
   if(currentScore < newScore) {
@@ -295,13 +307,13 @@ function drawClear(board) {
       } else if(board.board[i][j] === "burst"){
         $(cellID).empty().append('<img src="img/burst.gif">');
       } else if (board.board[i][j].type === 'blue') {
-        $(cellID).empty().append('<img src="img/tardis.png">');
+        $(cellID).empty().append('<img src="img/'+ blue + '">');
       } else if (board.board[i][j].type === 'red') {
-        $(cellID).empty().append('<img src="img/dalek.png">');
+        $(cellID).empty().append('<img src="img/'+ red + '">');
       } else if (board.board[i][j].type === 'green') {
-        $(cellID).empty().append('<img src="img/cyber.jpg">');
+        $(cellID).empty().append('<img src="img/'+ green + '">');
       } else if (board.board[i][j].type === 'yellow') {
-        $(cellID).empty().append('<img src="img/angel.png">');
+        $(cellID).empty().append('<img src="img/'+ yellow + '">');
       }
     }
   }
