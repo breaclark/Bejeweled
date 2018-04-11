@@ -295,13 +295,13 @@ function drawClear(board) {
       } else if(board.board[i][j] === "burst"){
         $(cellID).empty().append('<img src="img/burst.gif">');
       } else if (board.board[i][j].type === 'blue') {
-        $(cellID).empty().append('<img src="img/blue.svg">');
+        $(cellID).empty().append('<img src="img/tardis.png">');
       } else if (board.board[i][j].type === 'red') {
-        $(cellID).empty().append('<img src="img/red.svg">');
+        $(cellID).empty().append('<img src="img/dalek.png">');
       } else if (board.board[i][j].type === 'green') {
-        $(cellID).empty().append('<img src="img/green.svg">');
+        $(cellID).empty().append('<img src="img/cyber.jpg">');
       } else if (board.board[i][j].type === 'yellow') {
-        $(cellID).empty().append('<img src="img/yellow.svg">');
+        $(cellID).empty().append('<img src="img/angel.png">');
       }
     }
   }
@@ -321,42 +321,13 @@ function drawNewGems(board, i = -1, j = -1) {
       } else if(board.board[i][j] === "burst"){
         $(cellID).empty().append('<img src="img/burst.gif">');
       } else if (board.board[i][j].type === 'blue') {
-        $(cellID).empty().append('<img src="img/blue.svg">');
+        $(cellID).empty().append('<img src="img/tardis.png">');
       } else if (board.board[i][j].type === 'red') {
-        $(cellID).empty().append('<img src="img/red.svg">');
+        $(cellID).empty().append('<img src="img/dalek.png">');
       } else if (board.board[i][j].type === 'green') {
-        $(cellID).empty().append('<img src="img/green.svg">');
+        $(cellID).empty().append('<img src="img/cyber.jpg">');
       } else if (board.board[i][j].type === 'yellow') {
-        $(cellID).empty().append('<img src="img/yellow.svg">');
-      }
-      setTimeout(function() {
-        drawNewGems(board, i, j+1);
-      }, 200*(1/(j+1)));
-    }
-    drawNewGems(board, i+1, j);
-  }
-}
-
-function drawNewGems(board, i = -1, j = -1) {
-  if (i === -1 && j === -1) {
-    setTimeout(function() {
-      drawNewGems(board, 0, 0);
-    }, 700);
-  } else if (i < board.board.length) {
-    if (j < board.board.length){
-      var cellID = '#' + i + '-' + j;
-      if (typeof(board.board[i][j]) === "undefined"){
-        return;
-      } else if(board.board[i][j] === "burst"){
-        $(cellID).empty().append('<img src="img/burst.gif">');
-      } else if (board.board[i][j].type === 'blue') {
-        $(cellID).empty().append('<img src="img/blue.svg">');
-      } else if (board.board[i][j].type === 'red') {
-        $(cellID).empty().append('<img src="img/red.svg">');
-      } else if (board.board[i][j].type === 'green') {
-        $(cellID).empty().append('<img src="img/green.svg">');
-      } else if (board.board[i][j].type === 'yellow') {
-        $(cellID).empty().append('<img src="img/yellow.svg">');
+        $(cellID).empty().append('<img src="img/angel.png">');
       }
       setTimeout(function() {
         drawNewGems(board, i, j+1);
