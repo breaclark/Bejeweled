@@ -283,10 +283,25 @@ var red = "red.svg";
 var set;
 function jewelSet() {
   if (set === "drwho") {
-    var green = "angel.png";
-    var blue = "tardis.png";
-    var yellow = "cyber.jpg";
-    var red = "dalek.png";
+    green = "angel.png";
+    blue = "tardis.png";
+    yellow = "cyber.jpg";
+    red = "dalek.png";
+  }else if (set === "harry") {
+    green = "slyth.png";
+    blue = "raven.png";
+    yellow = "huff.png";
+    red = "gryff.gif";
+  }else if (set === "zelda") {
+    green = "rupee.png";
+    blue = "octo.png";
+    yellow = "trif.png";
+    red = "heart.png";
+  }else if (set === "mario") {
+    green = "shell.png";
+    blue = "flower.png";
+    yellow = "star.png";
+    red = "mush.png";
   }
 }
 // User Interface Logic
@@ -333,13 +348,13 @@ function drawNewGems(board, i = -1, j = -1) {
       } else if(board.board[i][j] === "burst"){
         $(cellID).empty().append('<img src="img/burst.gif">');
       } else if (board.board[i][j].type === 'blue') {
-        $(cellID).empty().append('<img src="img/tardis.png">');
+        $(cellID).empty().append('<img src="img/'+ blue + '">');
       } else if (board.board[i][j].type === 'red') {
-        $(cellID).empty().append('<img src="img/dalek.png">');
+        $(cellID).empty().append('<img src="img/'+ red + '">');
       } else if (board.board[i][j].type === 'green') {
-        $(cellID).empty().append('<img src="img/cyber.jpg">');
+        $(cellID).empty().append('<img src="img/'+ green + '">');
       } else if (board.board[i][j].type === 'yellow') {
-        $(cellID).empty().append('<img src="img/angel.png">');
+        $(cellID).empty().append('<img src="img/'+ yellow + '">');
       }
       setTimeout(function() {
         drawNewGems(board, i, j+1);
@@ -350,6 +365,7 @@ function drawNewGems(board, i = -1, j = -1) {
 }
 
 $(document).ready(function() {
+  $('#instructions').modal('show');
   var newBoard = new Board();
   newBoard.board = [[gem1, gem2, gem3, gem4, gem5, gem6, gem7], [gem8, gem9, gem10, gem11, gem12, gem13, gem14], [gem15, gem16, gem17, gem18, gem19, gem20, gem21], [gem22, gem23, gem24, gem25, gem26, gem27, gem28], [gem29, gem30, gem31, gem32, gem33, gem34, gem35], [gem36, gem37, gem38, gem39, gem40, gem41, gem42], [gem43, gem44, gem45, gem46, gem47, gem48, gem49]];
   // newBoard.startBoard();
@@ -382,11 +398,17 @@ $(document).ready(function() {
     }
   });
 
-  $('.btn').click(function(){
-    debugger;
+  $('#bedazzle').click(function(){
     newBoard = new Board();
     newBoard.startBoard();
     drawClear(newBoard);
     $("#game-score").text(currentScore);
+  });
+  $('.jewel').click(function(){
+    $('.hidden').show();
+    $('.jewels').hide();
+    set = $(this).val();
+    jewelSet();
+    drawClear(newBoard);
   });
 });
