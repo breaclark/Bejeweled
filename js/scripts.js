@@ -411,4 +411,8 @@ $(document).ready(function() {
     jewelSet();
     drawClear(newBoard);
   });
+  $('#choose').click(function(){
+    $('.hidden').hide();
+    $('.jewels').show();
+  });
 });
