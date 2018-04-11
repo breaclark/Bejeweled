@@ -1,10 +1,10 @@
-# **Fake-Bejeweled**
+# **Bedazzzled!**
 
 #### By William Chu, Cory West-Forbes, Kristen Chellis, Brea Borlas
 
 ## Description
 
-A clone of bejeweled, the popular game.
+A clone of Bejeweled, the popular game.
 
 ## Specifications
 
