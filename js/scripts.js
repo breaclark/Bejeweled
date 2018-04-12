@@ -2,6 +2,7 @@
 function Gem(type) {
   this.type = type;
   this.pointVal = 50;
+  this.spin = false;
 }
 
 var matches;
@@ -240,7 +241,7 @@ Board.prototype.clearGems = function () {
   matches.forEach(function(item) {
     var coordinates=item.split(',');
     newScore += thisBoard[parseInt(coordinates[0])][parseInt(coordinates[1])].pointVal;
-    thisBoard[parseInt(coordinates[0])][parseInt(coordinates[1])] = "burst";
+    thisBoard[parseInt(coordinates[0])][parseInt(coordinates[1])].spin = true;
   });
   this.board = thisBoard;
 };
@@ -292,8 +293,9 @@ function drawClear(board) {
       var cellID = '#' + i + '-' + j;
       if (typeof(board.board[i][j]) === "undefined"){
         return;
-      } else if(board.board[i][j] === "burst"){
-        $(cellID).empty().append('<img src="img/burst.gif"><audio autoplay="autoplay" src="audio/dog2.mp3"></audio>');
+      } else if(board.board[i][j].spin === true){
+        $(cellID).append('<audio autoplay="autoplay" src="audio/dog2.mp3"></audio>');
+        $(cellID).children('img').addClass("spin");
       } else if (board.board[i][j].type === 'blue') {
         $(cellID).empty().append('<img src="img/lab.png">');
       } else if (board.board[i][j].type === 'red') {
@@ -318,8 +320,9 @@ function drawNewGems(board, i = -1, j = -1) {
       var cellID = '#' + i + '-' + j;
       if (typeof(board.board[i][j]) === "undefined"){
         return;
-      } else if(board.board[i][j] === "burst"){
-        $(cellID).empty().append('<img src="img/burst.gif"><audio autoplay="autoplay" src="audio/dog2.mp3"></audio>');
+      } else if(board.board[i][j].spin === true){
+        $(cellID).append('<audio autoplay="autoplay" src="audio/dog2.mp3"></audio>');
+        $(cellID).children('img').addClass("spin");
       } else if (board.board[i][j].type === 'blue') {
         $(cellID).empty().append('<img src="img/lab.png">');
       } else if (board.board[i][j].type === 'red') {
