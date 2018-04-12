@@ -293,7 +293,7 @@ function drawClear(board) {
       if (typeof(board.board[i][j]) === "undefined"){
         return;
       } else if(board.board[i][j] === "burst"){
-        $(cellID).empty().append('<img src="img/burst.gif"><audio autoplay="autoplay" src="audio/coin.mp3"></audio>');
+        $(cellID).empty().append('<img src="img/burst.gif"><audio autoplay="autoplay" src="audio/dog2.mp3"></audio>');
       } else if (board.board[i][j].type === 'blue') {
         $(cellID).empty().append('<img src="img/lab.png">');
       } else if (board.board[i][j].type === 'red') {
@@ -319,7 +319,7 @@ function drawNewGems(board, i = -1, j = -1) {
       if (typeof(board.board[i][j]) === "undefined"){
         return;
       } else if(board.board[i][j] === "burst"){
-        $(cellID).empty().append('<img src="img/burst.gif"><audio autoplay="autoplay" src="audio/coin.mp3"></audio>');
+        $(cellID).empty().append('<img src="img/burst.gif"><audio autoplay="autoplay" src="audio/dog2.mp3"></audio>');
       } else if (board.board[i][j].type === 'blue') {
         $(cellID).empty().append('<img src="img/lab.png">');
       } else if (board.board[i][j].type === 'red') {
