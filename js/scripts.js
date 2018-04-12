@@ -344,6 +344,7 @@ $(document).ready(function() {
       coordArray.push(xCoord,yCoord);
       $('.cell').addClass('no-click');
       $(this).addClass('highlight');
+      $('.btn').addClass('no-click');
       $('[id='+ xCoord + '-' + (yCoord + 1) + ']').addClass('highlight').removeClass('no-click');
       $('[id='+ xCoord + '-' + (yCoord - 1) + ']').addClass('highlight').removeClass('no-click');
       $('[id='+ (xCoord + 1) + '-' + yCoord + ']').addClass('highlight').removeClass('no-click');
@@ -360,9 +361,12 @@ $(document).ready(function() {
         // nothing
       }
       // resets click functionality to board for next turn
-      coordArray=[];
       $('.cell').removeClass('highlight');
-      $('.cell').removeClass('no-click');
+      setTimeout(function() {
+        coordArray=[];
+        $('.cell').removeClass('no-click');
+        $('.btn').removeClass('no-click');
+      }, 2000);
     }
   });
   // generates a new random board and resets score

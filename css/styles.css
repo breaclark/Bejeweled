@@ -10,13 +10,14 @@ body {
   text-align: center;
   height: 100%;
   background: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"), linear-gradient(to left, #513c93, #896fdb, #513c93) no-repeat center center fixed;
-  background-size:auto;
+  background-size: contain;
+  background-size: auto;
+
 }
 
 
 table {
-  height: 650px;
-  width: 650px;
+  width: 75%;
   border-collapse: separate;
   border-radius: 5px;
   margin: 8% auto 10% auto;
@@ -38,16 +39,15 @@ th {
 
 
 td {
+  height: 5%;
+  width: 5%;
   background-color: rgb(255, 255, 255, 0.2);
   border: 1px dashed rgb(239, 228, 127, 0.5);
-  max-width: 75px;
-  max-height: 75px;
   cursor: pointer;
 }
 
 img {
-  width: 80px;
-  height: 80px;
+  width: 90%;
   padding: 4px;
 }
 
