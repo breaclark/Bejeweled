@@ -293,15 +293,15 @@ function drawClear(board) {
       if (typeof(board.board[i][j]) === "undefined"){
         return;
       } else if(board.board[i][j] === "burst"){
-        $(cellID).empty().append('<img src="img/burst.gif">');
+        $(cellID).empty().append('<img src="img/burst.gif"><audio autoplay="autoplay" src="audio/coin.mp3"></audio>');
       } else if (board.board[i][j].type === 'blue') {
-        $(cellID).empty().append('<img src="img/blue.svg">');
+        $(cellID).empty().append('<img src="img/lab.png">');
       } else if (board.board[i][j].type === 'red') {
-        $(cellID).empty().append('<img src="img/red.svg">');
+        $(cellID).empty().append('<img src="img/yorky.png">');
       } else if (board.board[i][j].type === 'green') {
-        $(cellID).empty().append('<img src="img/green.svg">');
+        $(cellID).empty().append('<img src="img/pitbull.png">');
       } else if (board.board[i][j].type === 'yellow') {
-        $(cellID).empty().append('<img src="img/yellow.svg">');
+        $(cellID).empty().append('<img src="img/terrier.png">');
       }
     }
   }
@@ -319,15 +319,15 @@ function drawNewGems(board, i = -1, j = -1) {
       if (typeof(board.board[i][j]) === "undefined"){
         return;
       } else if(board.board[i][j] === "burst"){
-        $(cellID).empty().append('<img src="img/burst.gif">');
+        $(cellID).empty().append('<img src="img/burst.gif"><audio autoplay="autoplay" src="audio/coin.mp3"></audio>');
       } else if (board.board[i][j].type === 'blue') {
-        $(cellID).empty().append('<img src="img/blue.svg">');
+        $(cellID).empty().append('<img src="img/lab.png">');
       } else if (board.board[i][j].type === 'red') {
-        $(cellID).empty().append('<img src="img/red.svg">');
+        $(cellID).empty().append('<img src="img/yorky.png">');
       } else if (board.board[i][j].type === 'green') {
-        $(cellID).empty().append('<img src="img/green.svg">');
+        $(cellID).empty().append('<img src="img/pitbull.png">');
       } else if (board.board[i][j].type === 'yellow') {
-        $(cellID).empty().append('<img src="img/yellow.svg">');
+        $(cellID).empty().append('<img src="img/terrier.png">');
       }
       setTimeout(function() {
         drawNewGems(board, i, j+1);
