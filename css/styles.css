@@ -17,7 +17,8 @@ body {
 
 
 table {
-  width: 75%;
+  height: 650px;
+  width: 650px;
   border-collapse: separate;
   border-radius: 5px;
   margin: 8% auto 10% auto;
@@ -39,15 +40,16 @@ th {
 
 
 td {
-  height: 5%;
-  width: 5%;
+  max-width: 75px;
+  max-height: 75px;
   background-color: rgb(255, 255, 255, 0.2);
   border: 1px dashed rgb(239, 228, 127, 0.5);
   cursor: pointer;
 }
 
 img {
-  width: 90%;
+  width: 80px;
+  height: 80px;
   padding: 4px;
 }
 
@@ -95,7 +97,7 @@ h1 {
 }
 
 .modal {
-  padding-top: 500px;
+  padding-top: 300px;
 }
 
 .modal-title {
