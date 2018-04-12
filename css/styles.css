@@ -68,13 +68,13 @@ h1 {
   color: #efe47f;
   font-size: 80px;
   text-align: center;
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 
 .btn, .btn:active, .btn:focus{
   outline: none;
-  font-family: 'Bungee Inline', cursive;
+  font-family: 'Cabin Sketch', cursive;
   font-size: 28px;
   background-color: rgb(239, 228, 127);
   color: #896fdb;
@@ -100,5 +100,5 @@ h1 {
 }
 
 .modal-body span {
-  font-family: 'Bungee Inline', cursive;
+  font-family: 'Cabin Sketch', cursive;
 }

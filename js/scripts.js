@@ -373,7 +373,6 @@ $(document).ready(function() {
   });
 
   $('.btn').click(function(){
-    debugger;
     newBoard = new Board();
     newBoard.startBoard();
     drawClear(newBoard);
