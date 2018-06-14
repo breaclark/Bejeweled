@@ -1,10 +1,10 @@
 # **Bedazzzled!**
 
-#### By William Chu, Cory West-Forbes, Kristen Chellis, Brea Borlas
+#### By William Chu, Cory West-Forbes, Kristen Chellis, Brea Clark
 
 ## Description
 
-A clone of Bejeweled, the popular game.
+A clone of Bejeweled, the popular game.See it live at: https://breaclark.github.io/Bejeweled/
 
 ## Specifications
 
@@ -35,7 +35,7 @@ A clone of Bejeweled, the popular game.
 
 * GPL
 
-William Chu, Cory West-Forbes, Kristen Chellis, Brea Borlas
+William Chu, Cory West-Forbes, Kristen Chellis, Brea Clark
  © 2018
 
 
